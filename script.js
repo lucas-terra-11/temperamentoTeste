@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 temperamentDetails.innerHTML = '<p>Você é Sanguíneo. <br> Detalhes...</p>';
                 break;
             case 'Colérico':
-                temperamentDetails.innerHTML = '<p>Você é Colérico. <br> Detalhes...</p>';
+                temperamentDetails.innerHTML = '<p>Você é Colérico. <br> </p>';
                 break;
             case 'Melancólico':
                 temperamentDetails.innerHTML = '<p>Você é Melancólico. <br> Detalhes...</p>';
