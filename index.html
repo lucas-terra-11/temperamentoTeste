@@ -10,7 +10,7 @@
             border: solid 1px black;
             padding: 10px;
             align-items: center;
-            text-align: center; 
+            text-align: start; 
         }
         .questoes:hover{
             background-color: #f4f4f4;
@@ -31,10 +31,11 @@
         }
         hr{
             width: 30vw;
-            height: 5px;
+            border: 1px solid black;
         }
         button{
-            background-color: #edd8ad;
+            background-color: #ffc95e;
+            color: black;
         }
         button:hover{
             background-color: #f29b32;
@@ -72,7 +73,7 @@
             text-align: center;
         }
         @media (max-width:800px) {
-            .tipo{
+        .tipo{
             width: 5rem;
         }
         .temps{
@@ -84,6 +85,34 @@
         h4{
             font-size: 12px;
         }
+        h1{
+            font-size: 100%;
+        }
+        }
+        @media (max-width:500px){
+        .tipo{
+            width: 3rem;
+        }
+        .temps{
+            font-size: 10px;
+        }
+        }
+        #instructions{
+            text-align: center;
+        }
+        #lis{
+            text-align: start;
+        }
+        .questoes b {
+            text-align: center;
+        }
+        label{
+            text-align: start;
+            align-items: start;
+        }
+        b{
+            display: block;
+            align-items: center;
         }
     </style>
 </head>
@@ -106,7 +135,7 @@
         </div>
         <div id="instructions" class="hidden">
             <h1>Instruções</h1>
-            <ul>
+            <ul id="lis">
                 <li>Este teste consiste em duas partes: a primeira para determinar se o Temperamento é quente ou frio; a segunda para determinar úmido ou seco. A combinação dessas características resulta em seu temperamento.</li> <br>
                 <li>Não existe temperamento melhor ou pior, portanto, evite manipular suas respostas para obter um resultado específico.</li> <br>
                 <li>Lembre-se de que o temperamento não requer esforço, é o que é natural para você, aquilo que está no fundo, longe de todos os filtros que usamos para viver em sociedade.</li> <br>
