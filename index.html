@@ -40,10 +40,6 @@
         button:hover{
             background-color: #f29b32;
         }
-        #logo{
-            width: 10rem;
-            position: absolute;
-        }
         #sang{
             border: solid 2px #f8bb5d;
         }
@@ -90,13 +86,13 @@
         }
         }
         @media (max-width:500px){
-        .tipo{
+            .tipo{
             width: 3rem;
         }
         .temps{
             font-size: 10px;
         }
-        }
+    }
         #instructions{
             text-align: center;
         }
@@ -114,12 +110,28 @@
             display: block;
             align-items: center;
         }
-    </style>
+    #logo{
+        width: 5rem;
+        padding: 0; 
+        margin: 0;
+    }
+    #link{
+        align-items: end;
+        text-align: end;
+        font-size: 0.7rem;
+    }
+    a{
+        color: black;
+    }
+    .titulo{
+        text-align: center;
+    }
+        </style>
 </head>
 <body>
     <div id="app">
         <div id="introducao" class="hidden">
-            <img id="logo" src="logoTeste.jpeg" alt="">
+            <img id="logo" src="logo.png" alt="">
             <h1>Teste de Temperamento</h1> <hr> <br>
             <div class="temps">
                 <div class="tipo" id="sang">Sanguíneo</div>
@@ -355,6 +367,9 @@
             <h2>Resultado Final</h2>
             <div id="temperament-details"></div>
             <button id="finish-test">Finalizar Teste</button>
+        </div>
+        <div id="link">
+            <a href="https://www.instagram.com/temperamentando.oficial/?hl=en">@TEMPERAMENTANDO.OFICIAL</a>
         </div>
     </div>
 
