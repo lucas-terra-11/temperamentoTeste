@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 function allQuestionsAnswered(start, end) {
         for (let i = start; i <= end; i++) {
-            if (!document.querySelector('input[name="q${i}"]:checked')) {
+            if (!document.querySelector(`input[name="q${i}"]:checked`)) {
                 return false;
             }
         }
