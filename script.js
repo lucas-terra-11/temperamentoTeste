@@ -110,12 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // segunda parte do teste é exibida
-    document.getElementById('submit-part2').addEventListener('click', function part22() {
+    document.getElementById('submit-part2').addEventListener('click', function () {
         if (allQuestionsAnswered(20, 32)) {
             part2.classList.add('hidden');
             result.classList.remove('hidden');
             showResult();
-            criarConfetes(150);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             alert('Por favor, responda todas as perguntas antes de continuar.');
