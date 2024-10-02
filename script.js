@@ -23,17 +23,29 @@ document.addEventListener('DOMContentLoaded', function () {
         part1.classList.remove('hidden');
     }); 
 
-    // ao clicar no elemento 'submit-part1', a primeira parte do conteúdo é ocultada, e a segunda parte é exibida.
+  // ao clicar no elemento 'submit-part1', a primeira parte do conteúdo é ocultada, e a segunda parte é exibida.
     document.getElementById('submit-part1').addEventListener('click', function () {
-        part1.classList.add('hidden');
-        part2.classList.remove('hidden');
+        if (allQuestionsAnswered(1, 19)) {
+            part1.classList.add('hidden');
+            part2.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            alert('Por favor, responda todas as perguntas antes de continuar.');
+        }
     });
-    // segunda parte do teste é exibida
+
+     // segunda parte do teste é exibida
     document.getElementById('submit-part2').addEventListener('click', function () {
-        part2.classList.add('hidden');
-        result.classList.remove('hidden');
-        showResult();
+        if (allQuestionsAnswered(20, 32)) {
+            part2.classList.add('hidden');
+            result.classList.remove('hidden');
+            showResult();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            alert('Por favor, responda todas as perguntas antes de continuar.');
+        }
     });
+    
     // teste finalizado
     document.getElementById('finish-test').addEventListener('click', function () {
         alert('Teste finalizado.');
@@ -98,28 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ao clicar no elemento 'submit-part1', a primeira parte do conteúdo é ocultada, e a segunda parte é exibida.
-    document.getElementById('submit-part1').addEventListener('click', function () {
-        if (allQuestionsAnswered(1, 19)) {
-            part1.classList.add('hidden');
-            part2.classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            alert('Por favor, responda todas as perguntas antes de continuar.');
-        }
-    });
 
-    // segunda parte do teste é exibida
-    document.getElementById('submit-part2').addEventListener('click', function () {
-        if (allQuestionsAnswered(20, 32)) {
-            part2.classList.add('hidden');
-            result.classList.remove('hidden');
-            showResult();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            alert('Por favor, responda todas as perguntas antes de continuar.');
-        }
-    });
+   
 function allQuestionsAnswered(start, end) {
         for (let i = start; i <= end; i++) {
             if (!document.querySelector(`input[name="q${i}"]:checked`)) {
